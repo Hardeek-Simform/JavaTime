@@ -28,16 +28,16 @@ public class Main {
         System.out.println("\n\n----------- Operations in date & time ------------");
         System.out.println("Selected date is:" + dt.toLocalDate() + " \nAfter 6 months the internship would be completed i.e. on " + dt.plusMonths(6).toLocalDate());
         LocalDate internshipStartDate = LocalDate.of(2023, 2, 7);
-        Period internshipCompletedMonth = Period.between(internshipStartDate, currentDate );
-        System.out.println("Total months completed in internship :" +internshipCompletedMonth.getMonths());
+        Period internshipCompletedMonth = Period.between(internshipStartDate, currentDate);
+        System.out.println("Total months completed in internship :" + internshipCompletedMonth.getMonths());
         System.out.println("Current year is leap year" + currentDate.isLeapYear());
 
         // working with zone
         ZoneId currentZone = ZoneId.systemDefault();
-        System.out.println("Your current zone is: "+currentZone);
-        System.out.println("List of different zones:\n"+ ZoneId.getAvailableZoneIds());
+        System.out.println("Your current zone is: " + currentZone);
+        System.out.println("List of different zones:\n" + ZoneId.getAvailableZoneIds());
         ZoneId marigotZone = ZoneId.of("America/Marigot");
         ZonedDateTime marigotZoneTime = ZonedDateTime.now(marigotZone);
-        System.out.println("In America/Marigot , timezone rules :"+marigotZone.getRules()+"     zonedDateTime :"+marigotZoneTime.toLocalTime());
+        System.out.println("In America/Marigot , timezone rules :" + marigotZone.getRules() + "     zonedDateTime :" + marigotZoneTime.toLocalTime());
     }
 }
